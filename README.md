@@ -13,7 +13,7 @@ Stream Spotify to speakers for ~50 EUR. Spotify Premium required.
 
 1. Flash [DietPi](https://dietpi.com/) on microSD, insert card into Pi, connect keyboard and screen to Pi, logon as root:dietpi.  
   Would've loved to use PiCore since it lives entirely in RAM but it's a bit too core to get everything to work. PiCorePlayer with a Spotify connect plugin would be a viable alternative to DietPi with librespot, maybe even better (faster boot times and no chance of MicroSD card corruption).
-2. Configure wifi, enable audio and let DietPi install.
+2. Configure wifi, enable audio and let DietPi install. After this you can disconnect screen/keyboard and connect using SSH.
 2. Install dependencies. tmux can be omitted if you don't know what that is.
 
         sudo apt-get install libasound2-dev pkg-config tmux build-essential
