@@ -66,7 +66,7 @@
         
 ## Extras
 
-1. [Backup SD card](https://raspberrytips.com/backup-raspberry-pi/#Create_an_image_of_the_SD_card) in case something gets corrupted. Replace <Disk Node Name> with disk node name.
+1. [Backup SD card](https://raspberrytips.com/backup-raspberry-pi/#Create_an_image_of_the_SD_card) in case something gets corrupted. Replace `<Disk Node Name>` with disk node name.
 
     Linux:
      
@@ -77,7 +77,7 @@
         sudo dd bs=4m if=/dev/<Disk Node Name> of=backup.img
         
     Windows: win32diskimager
-2. Enable Audio noise reduction in `dietpi-config` but careful. It's best to do this after you made a backup because this disables the HDMI output => if anything goes wrong with wifi/ethernet/ssh you won't be able to interact with the rpi.
+2. Enable audio noise reduction in `dietpi-config` but careful. It's best to do this after you made a backup because this disables the HDMI output => if anything goes wrong with wifi/ethernet/ssh you won't be able to interact with the rpi.
 3. Change root and dietpi password (you never know someone with malicious intentions enters the network).
 
 ## Tips
