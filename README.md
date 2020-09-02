@@ -1,5 +1,7 @@
 # librespot-rpi
 
+Stream Spotify to speakers for ~50 EUR. Spotify Premium required.
+
 ## Hardware
 
 - The cheapest/most efficient board with a 3.5mm audio jack: [Rasberry Pi 3 Model A+](https://www.raspberrypi.org/products/raspberry-pi-3-model-a-plus/).
