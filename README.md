@@ -65,7 +65,45 @@ Stream Spotify to speakers for ~50 EUR. Spotify Premium required.
         systemctl enable librespot
         
      Use following commands for troubleshooting: `systemctl stop librespot` `systemctl status librespot` `journalctl -u librespot.service -b`
-        
+     
+## (Optional) Changing output to mono
+
+`sudo nano /etc/asound.conf`
+
+```conf
+pcm.card0 {
+  type hw
+  card 0
+}
+
+ctl.card0 {
+  type hw
+  card 0
+}
+
+pcm.monocard {
+  slave.pcm card0
+  slave.channels 2
+  type route
+  ttable {
+    0.0 0.5
+    1.0 0.5
+    0.1 0.5
+    1.1 0.5
+  }
+}
+
+ctl.monocard {
+  type hw
+  card 0
+}
+
+pcm.!default monocard
+ctl.!default monocard
+```
+
+[source](https://support.hifiberry.com/hc/en-us/community/posts/360013981717-HOWTO-Send-mono-to-both-speaker-)
+
 ## Extras
 
 1. [Backup SD card](https://raspberrytips.com/backup-raspberry-pi/#Create_an_image_of_the_SD_card) in case something gets corrupted. Replace `<Disk Node Name>` with disk node name.
